@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href='assets/css/style.css' rel="stylesheet">
+	<title>QR-Code Generator</title>
+</head>
+<body>
+	<main>
+		<nav class="navbar p-3 navbar-expand-lg navbar-light bg-white justify-content-space-between">
+			<a class="navbar-brand" href="index.html">QR-Code GEN</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">		
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#" >Developer</a></li>
+					<li class="nav-item"><a class="nav-link" href="#" >Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<div class="container-fluid border-1">
+			<div class="row">
+				<div class="main-col col-sm-7">
+					<div class="main-col-container container-fluid">
+						<div class="row mt-5 justify-content-center">
+							<button onclick="email()" class="option" id="email">
+								<img src="assets/icons/email-svgrepo-com.svg" class="icon">	Email
+							</button>
+							<button onclick="telephone()" class="option" id="tel">
+								<img src="assets/icons/telephone-svgrepo-com.svg" class="icon">Tel+
+							</button>
+							<button onclick="url()" class="option"id="url">
+								<img src="assets/icons/link-svgrepo-com.svg" class="icon">URL
+							</button>
+							<button onclick="wifi()" class="option"id="wifi">
+								<img src="assets/icons/wifi-svgrepo-com.svg" class="icon">Wifi
+							</button>
+						</div>
+						<div id="forms-area" class="row p-5 d-flex justify-content-center">
+							<form action="" method="get" accept-charset="utf-8">
+								<input type="text" placeholder="enter text" max="200" id="input-text">
+							</form>
+							<form action="" method="get" accept-charset="utf-8" style="display:none;">
+								<input type="text" placeholder="SSID (wifi name)" name="SSID">
+								<input type="text" placeholder="Authentication (default WPA)" name="authentication-type">
+								<input type="password" placeholder="Password" name='password'>
+							</form>
+							<button class="btn m-3 btn-primary" id="genBtn">Create Code</button>
+						</div>
+						</div>
+
+				</div>
+				<div class="result-col col-sm-5">
+					<h2>QR-CODE</h2>
+					<div class="preloader"></div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<script src="assets/js/script.js"></script>
+	<script src="assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+</body>
+</html>
